@@ -160,11 +160,13 @@ or:
 **02**
 Copy all files in the $HOME/1123 directory, that end in ".txt", and omit files containing a tilde "~" character, to directory $HOME/CUT.
 Use only the find and cp commands. You will need to utilize the -exec option on find to accomplish this activity.
-The find command uses BOOLEAN "!" to designate that it does not want to find any files or directories that follows.
-  find ~/1123/*.txt ! -name "*~*" -exec cp {} ~/CUT \;
- another way:
+The find command uses BOOLEAN "!" to designate that it does not want to find any files or directories 
+that follows.
+~~~bash
+find ~/1123/*.txt ! -name "*~*" -exec cp {} ~/CUT \;
+ #another way:
   cp ~/1123/*[^~].txt ~
-
+~~~
 
 
 **03**
